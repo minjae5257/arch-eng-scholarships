@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>건축공학과 장학금 안내</title>
+  <meta name="description" content="건축공학과 학생을 위한 국가·교외 장학금 안내">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="kicker">Architecture Engineering</p>
+    <h1>건축공학과 장학금 안내</h1>
+    <p class="lede">국가 지원, 이공계 우수, 건축·건설 단체, 근로·주거 지원을 한곳에서 찾아보세요.</p>
+    <p class="notice">금액·일정·자격은 학기마다 바뀝니다. 지원 전에 반드시 공식 안내를 확인하세요. 이곳 목록은 탐색용 예시입니다.</p>
+  </header>
+
+  <main>
+    <section class="toolbar" aria-label="검색과 필터">
+      <label class="search">
+        <span class="sr-only">장학금 검색</span>
+        <input id="q" type="search" placeholder="이름, 주관, 키워드 검색" autocomplete="off">
+      </label>
+      <div class="filters" role="group" aria-label="유형 필터">
+        <button type="button" class="chip is-on" data-cat="all">전체</button>
+        <button type="button" class="chip" data-cat="national">국가</button>
+        <button type="button" class="chip" data-cat="merit">이공·성적</button>
+        <button type="button" class="chip" data-cat="arch">건축·건설</button>
+        <button type="button" class="chip" data-cat="work">근로·주거</button>
+      </div>
+    </section>
+    <p id="count" class="count" aria-live="polite"></p>
+    <section id="list" class="grid"></section>
+  </main>
+
+  <footer>
+    <p>공식 공고는 한국장학재단, 소속 대학 장학팀, 관련 협회에서 확인하세요.</p>
+  </footer>
+
+  <script src="scholarships.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

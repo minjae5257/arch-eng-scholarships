@@ -1,0 +1,92 @@
+:root {
+  --bg: #eceae6;
+  --paper: #f7f5f1;
+  --ink: #1f2320;
+  --muted: #5c615c;
+  --line: #d4d0c8;
+  --accent: #8a5a32;
+  --accent-ink: #fffaf4;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font: 16px/1.5 "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+.hero, main, footer { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+.hero { padding-top: 40px; padding-bottom: 8px; }
+.kicker {
+  margin: 0 0 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--accent);
+}
+h1 { margin: 0 0 10px; font-size: 28px; font-weight: 700; }
+.lede { margin: 0 0 12px; color: var(--muted); }
+.notice {
+  margin: 0 0 24px;
+  padding: 10px 12px;
+  background: #efe6d8;
+  border-left: 3px solid var(--accent);
+  font-size: 14px;
+}
+.toolbar { display: grid; gap: 12px; margin-bottom: 12px; }
+.search input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  font: inherit;
+}
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 6px 12px;
+  cursor: pointer;
+  font: inherit;
+}
+.chip.is-on { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.count { margin: 0 0 16px; color: var(--muted); font-size: 14px; }
+.grid { display: grid; gap: 12px; padding-bottom: 40px; }
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 16px;
+}
+.card h2 { margin: 0 0 6px; font-size: 18px; }
+.org { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+.tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: #e4e0d8;
+}
+.meta { margin: 0 0 8px; font-size: 14px; }
+.card a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.card a:hover { text-decoration: underline; }
+.empty { color: var(--muted); padding: 24px 0; }
+footer {
+  padding-bottom: 32px;
+  color: var(--muted);
+  font-size: 13px;
+}
+@media (min-width: 700px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  h1 { font-size: 34px; }
+}
